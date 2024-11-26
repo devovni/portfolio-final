@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root{
+    
+    --nightsky: #192847;
+    --night2: #2E2D4D;
+}
+.night
+{
+    background-color: rgba(25,40,71,255);
+
+}
+.cloud {
+    background-color: white;
+    width: 1rem;
+    height: 0.5rem;
+    border-radius: 999px;
+    
+}
+.beam {
+    position: absolute;
+    
+    left: -20%;
+    top: 50%;
+	width: 0;
+	height: 0;
+    opacity: 50%;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 20px solid #2aca72;
+}
+
+.cloud:after {
+    @apply content-[''];
+    @apply bg-white;
+    @apply absolute;
+    @apply size-2;
+    @apply rounded-full;
+    @apply -top-1;
+    @apply left-0.5
+}
+
+.cloud:before {
+    @apply content-[''];
+    @apply bg-white;
+    @apply absolute;
+    @apply size-2.5;
+    @apply rounded-full;
+    @apply -top-1.5;
+    @apply left-1.5;
+    transition: all 150ms;
+}
+
+.moon {
+    left: 0px;
+    position: absolute;
+    /* overflow: hidden; */
+    background-color: #eab308;
+    width: 50%;
+    height: 100%;
+    border-radius: 100%;
+    @apply transition-transform;
+    /* transition: 0.3s; */
+
+}
+
+input:checked ~ .moon {
+    transform: translateX(100%);
+    
+  }
+
+input:checked ~ .moon::after {
+    /* box-shadow: inset 28px -15px 0px 0px rgba(25,40,71,255); */
+    width: 90%;
+    height: 90%;
+    transition: all 150ms;
+  }
+
+.moon:after {
+    
+    content: "";
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    margin: -0.3rem;
+    margin-top: -0.5rem;
+    border-radius: 100%;
+    width: 0%;
+    height: 0%;
+    background-color: #2E2D4D;
+    transition: all 150ms;
+
+    /* @apply -mx-3;
+    @apply -my-2;
+    @apply size-full; */
+    
+
+}

@@ -1,0 +1,17 @@
+<div class="m-1">
+    <label class="overflow-hidden w-[3rem] h-[1.5rem] block relative rounded-2xl ring">
+        <input (click)="toggle()" type="checkbox" class="invisible peer" #switch>
+        <span class="bg-[#2E2D4D] absolute w-16 -left-16 h-full transition-transform peer-checked:translate-x-full ">
+            <div class="relative w-[10%] h-[30%] top-1 left-3 bg-slate-800 ring-1 rounded-full">
+                <div class="beam"></div>
+                <div class="relative w-[200%] h-[75%] top-1 -left-1/2 bg-gray-500 rounded-full">
+                </div>
+            </div>
+            
+        </span>
+        <div class="bg-sky-500 absolute top-0 w-16 h-full transition-transform peer-checked:translate-x-full">
+            <div class="absolute top-2 left-[40%] cloud"></div>
+        </div>
+        <span class="moon"></span>
+    </label>
+</div>
