@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SwitchComponent } from "../switch/switch.component";
+
 
 @Component({
   selector: 'app-header',
@@ -9,5 +10,5 @@ import { SwitchComponent } from "../switch/switch.component";
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-
+  
 }

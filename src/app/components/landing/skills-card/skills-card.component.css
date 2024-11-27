@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h2 {
+    @apply font-bold text-4xl text-wrap dark:text-darkAccent m-3;
+}
+
+p {
+    @apply m-3 text-lg;
+}
+
+
+ul {
+    @apply my-3;
+}
+
+fa-icon {
+    /* #209fb5 */
+    @apply size-16 bg-darkAccent text-black rounded-full text-2xl justify-center items-center flex;
+}
+
+.segment{
+    @apply p-10 flex flex-col items-center bg-[#232634];
+}
+
+li{
+    @apply text-xl my-2
+}

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ExperienceCardComponent } from "../../components/landing/experience-card/experience-card.component";
+import { SkillsCardComponent } from "../../components/landing/skills-card/skills-card.component";
 import { ProjectsCardComponent } from "../../components/landing/projects-card/projects-card.component";
 import { HeaderComponent } from "../../components/shared/header/header.component";
 import { PresentationCardComponent } from "../../components/landing/presentation-card/presentation-card.component";
@@ -11,7 +11,7 @@ import { HeroBannerComponent } from '../../components/landing/hero-banner/hero-b
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [ExperienceCardComponent, ProjectsCardComponent, HeaderComponent, PresentationCardComponent, AboutCardComponent, ContactCardComponent, FooterComponent, HeroBannerComponent],
+  imports: [SkillsCardComponent, ProjectsCardComponent, HeaderComponent, PresentationCardComponent, AboutCardComponent, ContactCardComponent, FooterComponent, HeroBannerComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css'
 })
