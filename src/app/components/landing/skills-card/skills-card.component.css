@@ -7,12 +7,12 @@ h2 {
 }
 
 p {
-    @apply m-3 text-lg;
+    @apply col-span-2 self-center;
 }
 
 
 ul {
-    @apply my-3;
+    @apply my-3 flex flex-col justify-evenly;
 }
 
 fa-icon {
@@ -21,9 +21,22 @@ fa-icon {
 }
 
 .segment{
-    @apply p-10 flex flex-col items-center bg-[#232634];
+    /* shadow-green-500 dark:shadow-[#62815d] rounded-lg bg-[#44823B]  shadow-lg shadow-[#62815d] */
+    @apply p-10 flex flex-col  rounded-lg items-center bg-white dark:bg-[#232634];
+    box-shadow: 0px 5px 10px 0px #86df78;
+    animation: glow 2s  ease-in-out infinite
+}
+@keyframes glow
+{
+50% {box-shadow: 0px 5px 10px 2px #86df78}
 }
 
 li{
-    @apply text-xl my-2
+    @apply  my-2 grid grid-cols-3 h-10 text-3xl gap-4 ;
+}
+
+
+img {
+    @apply place-self-center  col-span-1 pointer-events-none select-none h-full;
+    
 }
