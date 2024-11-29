@@ -21,28 +21,26 @@ html {
 
 body{
     
-    background-image: url(https://wallpapercave.com/wp/wp11339748.jpg);
+    /* background-image: url(https://wallpapercave.com/wp/wp11339748.jpg); */
     /* background-image: url(https://cdn.pixabay.com/photo/2016/11/18/18/37/programming-1836330_960_720.png); */
-
-    @apply text-black;
-
+    @apply text-black bg-transparent;
+    @apply dark:text-[--textColor];
     /* @apply bg-gradient-to-b from-[#fcfcfc4d] to-[#fff00f]; */
     /* @apply dark:bg-gradient-to-b from-[#202020] to-[#252020]; */
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; */
 }
 
 section{
     /* @apply w-[70%] m-auto my-3; */
-    @apply bg-[#eff1f5];
-    @apply dark:bg-[#303446];
-
-    @apply dark:text-[--textColor];
+    @apply transition-all duration-1000;
+    @apply bg-[#eff1f5] dark:bg-[#303446];
+    @apply py-5;
 }
 
 section > div{
-    @apply w-[70%] py-2 m-auto;
+    @apply w-[70%] m-auto;
     /* @apply bg-[#eff1f5];
     @apply dark:bg-[#303446]; */
 
