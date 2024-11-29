@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-hero-banner',
@@ -7,10 +7,10 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   templateUrl: './hero-banner.component.html',
   styleUrl: './hero-banner.component.css'
 })
-export class HeroBannerComponent {
+export class HeroBannerComponent implements OnInit{
   @ViewChild('banner') banner: ElementRef;
 
-  async ngAfterViewInit(): Promise<void> {
+  async ngOnInit(): Promise<void> {
     let text: string = 'Hello, world'
     let text2: string = 'Hello, I\'m Ignacio'
     let speed: Number = 150;
