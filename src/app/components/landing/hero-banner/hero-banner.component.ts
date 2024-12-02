@@ -11,9 +11,9 @@ export class HeroBannerComponent implements OnInit{
   @ViewChild('banner') banner: ElementRef;
 
   async ngOnInit(): Promise<void> {
-    let text: string = 'Hello, world'
-    let text2: string = 'Hello, I\'m Ignacio'
-    let speed: Number = 150;
+    let text: string = $localize`Hola, Mundo`
+    let text2: string = $localize `Hola, Soy OvniDev`
+    let speed: Number = 100;
 
     await this.sleep(500)
     for (var i = 0; i < text.length; i++) {
@@ -22,7 +22,8 @@ export class HeroBannerComponent implements OnInit{
     }
     await this.sleep(500)
 
-    for (var i = text.length; i > 6; i--) {
+    for (var i = text.length; i > 0; i--) {
+      if(text[i] === ',') break;
       this.banner.nativeElement.textContent = text.substring(0, i)
       await this.sleep(speed)
     }
