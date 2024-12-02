@@ -15,9 +15,9 @@ export class SkillsCardComponent {
   faCircleUser = faCircleUser
   faTerminal = faTerminal
   faLayerGroup = faLayerGroup
-  langImgPath = '/assets/logos/languages'
-  frameworkImgPath = '/assets/logos/frameworks'
-  toolImgPath = '/assets/logos/tools'
+  langImgPath = './assets/logos/languages'
+  frameworkImgPath = './assets/logos/frameworks'
+  toolImgPath = './assets/logos/tools'
 
   languages = [
     {
