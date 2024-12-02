@@ -1,12 +1,12 @@
 <section id="skill">
     <div>
-        <h1 class="font-bold text-7xl my-16">Habilidades</h1>
+        <h1 class="font-bold text-7xl my-16" i18n>Habilidades</h1>
 
         <div
             class="grid lg:grid-cols-3 shadow gap-4 align-baseline">
             <div class="segment">
                 <fa-icon [icon]="faCode"></fa-icon>
-                <h2>Languages</h2>
+                <h2 i18n>Languages</h2>
                 <ul>
                     @for (Language of languages; track Language) {
 
@@ -38,7 +38,7 @@
 
             <div class="segment">
                 <fa-icon [icon]="faTerminal"></fa-icon>
-                <h2>Tools</h2>
+                <h2 i18n>Tools</h2>
                 <ul>
                     @for (tool of tools; track tools) {
 
