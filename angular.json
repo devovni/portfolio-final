@@ -9,6 +9,12 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "es",
+        "locales": {
+          "en": "src/locale/messages.en.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -24,7 +30,7 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public" 
               }
             ],
             "styles": [
@@ -42,11 +48,14 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "6kB",
+                  "maximumError": "15kB"
                 }
               ],
               "outputHashing": "all"
+            },
+            "en":{
+              "localize":["en"]
             },
             "development": {
               "optimization": false,
@@ -61,6 +70,9 @@
           "configurations": {
             "production": {
               "buildTarget": "portfolio-finalProject:build:production"
+            },
+            "en":{
+              "buildTarget": "portfolio-finalProject:build:en"
             },
             "development": {
               "buildTarget": "portfolio-finalProject:build:development"
