@@ -81,6 +81,10 @@ export class SkillsCardComponent {
       path: `${this.toolImgPath}/git.svg`,
       alt: "git"
     }, {
+      name: "Docker",
+      path: `${this.toolImgPath}/docker.svg`,
+      alt: "docker"
+    }, {
       name: "Linux",
       path: `${this.toolImgPath}/tux.svg`,
       alt: "tux"
