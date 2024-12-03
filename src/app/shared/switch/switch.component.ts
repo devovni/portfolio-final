@@ -15,14 +15,21 @@ export class SwitchComponent implements AfterViewInit {
   
 
   ngAfterViewInit(): void {
-    localStorage['darkMode'] = window.matchMedia('(prefers-color-scheme: dark)').matches
+    if(!localStorage['darkMode'])
+    {
+      localStorage['darkMode'] = window.matchMedia('(prefers-color-scheme: dark)').matches
+    }
+    this.inputTag.nativeElement.checked = localStorage['darkMode'] === 'true'
     
-    document.documentElement.classList.toggle('dark', localStorage['darkmode']  || (!('darkmode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches))
+    document.documentElement.classList.toggle('dark', this.inputTag.nativeElement.checked)
 
-    this.inputTag.nativeElement.checked = localStorage['darkMode']
   }
 
   toggle() {
-    document.documentElement.classList.toggle('dark', this.inputTag.checked)
+
+    document.documentElement.classList.toggle('dark', this.inputTag.nativeElement.checked)
+    localStorage['darkMode'] = this.inputTag.nativeElement.checked
+    console.log(`local storage is ${localStorage['darkMode']}`)
+    console.log(`should be ${this.inputTag.nativeElement.checked}`)
   }
 }
