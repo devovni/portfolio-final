@@ -1,20 +1,72 @@
 <section id="contact">
-    <div>
-        <h1 class="font-bold text-7xl my-16" i18n>Contacto</h1>
-        <div>
+    <h2 i18n>Contacto</h2>
+    <div class=" flex flex-col justify-center content-center items-center gap-5">
+        <!-- <div class="shadow-lg bg-white dark:bg-darkSecondary rounded-md p-5 w-1/2 left-1/2"> -->
+        <div class="card">
+        <h2 i18n>Envíame un mensaje</h2>
+            
+            <form class="w-full text-black/60" [formGroup]="form" (ngSubmit)="submit()">
+                
+                <div class="flex flex-col gap-4 m-5 ">
+                    <div class="form-group">
+                        <label for="fName" class="p-1">
+                            <fa-icon [icon]="userIcon"></fa-icon>
+                        </label>
+                        <input class=" w-[90%] outline-none" type="text" id="fName" name="name"
+                            placeholder="Nombre" formControlName="name">
+                            @if (form.controls['name'].valid) {
+                                <fa-icon class="text-green-500 text-xl self-center" [icon]="check"></fa-icon>
+                            }
+                            @if (form.controls['name'].invalid && form.controls['name'].dirty)
+                            {
+                                <fa-icon class="text-red-500 text-xl self-center" [icon]="exclamation"></fa-icon>
+    
+                            }
+                    </div>
 
-        <form action="https://formspree.io/f/xgvenyor" method="POST">
-            <label i18n>
-                Tu Email:
-                <input type="email" name="email">
-            </label>
-            <label i18n>
-                Tu Mensaje:
-                <textarea name="message"></textarea>
-            </label>
-            <!-- your other form fields go here -->
-            <button type="submit" i18n>Enviar</button>
-        </form>
+                    <div class="form-group" >
+                        <label for="fEmail" class="p-1">
+                            <fa-icon [icon]="envelope"></fa-icon>
+                        </label>
+                        <input class="w-[90%] outline-none"  type="email" name="email" id="fEmail"
+                            placeholder="E-mail" formControlName="email">
+                        @if (form.controls['email'].valid) {
+                            <fa-icon class="text-green-500 text-xl self-center" [icon]="check"></fa-icon>
+
+                        }
+
+                        @if (form.controls['email'].invalid && form.controls['email'].dirty)
+                        {
+                            <fa-icon class="text-red-500 text-xl self-center" [icon]="exclamation"></fa-icon>
+
+                        }
+                    </div>
+
+                    <div class="form-group">
+                        <textarea class=" resize-none w-[90%] outline-none" id="fMessage" name="message" rows="7"
+                            placeholder="Mensaje" formControlName="message" ></textarea>
+                    </div>
+
+                    <div class="block text-center">
+                        <button class="button  flex self-center  disabled:bg-slate-500 disabled:hover:top-0" [disabled]="form.invalid" [ngClass]="form.invalid? 'disabled cursor-not-allowed' : 'bg-blue-500 text-white' " type="submit"
+                            tabIndex="-1" i18n>Enviar Mensaje <fa-icon [icon]="send" class="px-1"></fa-icon></button>
+
+                    </div>
+                </div>
+
+            </form>
         </div>
+        <!-- <div class="flex gap-2  font-bold my-3">
+        </div> -->
+            <h2>Mis Redes:</h2>
+            <div class="flex  gap-3">
+                <a class="button bg-[#25292e] content-center" href="https://github.com/devovni" target="_blank"><fa-icon
+                        [icon]="github"></fa-icon><span class="px-1">GitHub</span></a>
+                <a class="button bg-[#0077b5] content-center" href="https://www.linkedin.com/in/ignacio-gonzalez-56561b179/" target="_blank"><fa-icon
+                        [icon]="linkedin"></fa-icon><span class="px-1">Linkedin</span></a>
+            </div>
+
     </div>
+
+
 </section>

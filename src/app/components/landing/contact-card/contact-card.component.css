@@ -1,0 +1,4 @@
+
+.form-group{
+    @apply  bg-slate-100 [&>*]:bg-slate-100 p-1 w-full rounded-md has-[:focus]:outline outline-blue-400 flex;
+}
