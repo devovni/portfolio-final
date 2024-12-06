@@ -1,61 +1,59 @@
 <section id="skill">
-    <div>
-        <h1 class="font-bold text-7xl my-16" i18n>Habilidades</h1>
 
-        <div
-            class="grid lg:grid-cols-3 shadow gap-4 align-baseline">
-            <div class="segment">
+    <h2 i18n>Habilidades</h2>
+    <!-- <p class=" col-span-2 self-center">{{Language.name}}</p> -->
+    <div class="flex flex-col lg:flex-row gap-4">
+        <div class="card">
+            <div class="bubble">
                 <fa-icon [icon]="faCode"></fa-icon>
-                <h2 i18n>Languages</h2>
-                <ul>
-                    @for (Language of languages; track Language) {
-
-                    <li>
-                        <img src={{Language.path}} alt={{Language.path}}>
-                        <p class=" col-span-2 self-center">{{Language.name}}</p>
-                    </li>
-                    }
-
-                </ul>
             </div>
+            <h3 i18n>Lenguajes</h3>
+            <ul>
+                @for (Language of languages; track $index) {
 
-            <div class="segment">
+                <li>
+                    <img src={{Language.path}} alt={{Language.path}}>
+                    <p>{{Language.name}}</p>
+                </li>
+                }
+
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="bubble">
                 <fa-icon [icon]="faLayerGroup"></fa-icon>
-                <h2>Frameworks</h2>
-                <ul>
-                    @for (framework of frameworks; track framework) {
-                    <div>
-
-                        <li>
-                            <img src={{framework.path}} alt={{framework.path}}>
-                            <p class=" col-span-2 self-center">{{framework.name}}</p>
-                        </li>
-                    </div>
-                    }
-
-                </ul>
             </div>
-
-            <div class="segment">
-                <fa-icon [icon]="faTerminal"></fa-icon>
-                <h2 i18n>Tools</h2>
-                <ul>
-                    @for (tool of tools; track tools) {
-
-                    <!-- <li class="flex gap-7 h-10 text-2xl ">
-                        <img class="pointer-events-none select-none" src={{tool.path}}
-                                alt={{tool.path}}>
-                        <p>{{tool.name}}</p>
-                    </li> -->
+            <h3>Frameworks</h3>
+            <ul>
+                @for (framework of frameworks; track $index) {
+                <div>
 
                     <li>
-                        <img src={{tool.path}} alt={{tool.path}}>
-                        <p class=" col-span-2 self-center">{{tool.name}}</p>
+                        <img src={{framework.path}} alt={{framework.path}}>
+                        <p>{{framework.name}}</p>
                     </li>
-                    }
+                </div>
+                }
 
-                </ul>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="bubble">
+                <fa-icon [icon]="faTerminal"></fa-icon>
             </div>
+            <h3 i18n>Herramientas</h3>
+            <ul>
+                @for (tool of tools; track $index) {
+                <li>
+                    <img src={{tool.path}} alt={{tool.path}}>
+                    <p>{{tool.name}}</p>
+                </li>
+                }
+
+            </ul>
         </div>
     </div>
+
 </section>
