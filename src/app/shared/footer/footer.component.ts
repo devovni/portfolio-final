@@ -9,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  click()
+  {
+    console.log('moo')
+  }
 }
