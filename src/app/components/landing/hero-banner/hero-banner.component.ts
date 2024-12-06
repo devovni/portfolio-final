@@ -7,12 +7,12 @@ import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
   templateUrl: './hero-banner.component.html',
   styleUrl: './hero-banner.component.css'
 })
-export class HeroBannerComponent implements OnInit{
+export class HeroBannerComponent implements OnInit {
   @ViewChild('banner') banner: ElementRef;
 
   async ngOnInit(): Promise<void> {
     let text: string = $localize`Hola, Mundo`
-    let text2: string = $localize `Hola, Soy OvniDev`
+    let text2: string = $localize`Hola, Soy devOvni🛸`
     let speed: Number = 100;
 
     await this.sleep(500)
@@ -23,7 +23,7 @@ export class HeroBannerComponent implements OnInit{
     await this.sleep(500)
 
     for (var i = text.length; i > 0; i--) {
-      if(text[i] === ',') break;
+      if (text[i] === ',') break;
       this.banner.nativeElement.textContent = text.substring(0, i)
       await this.sleep(speed)
     }

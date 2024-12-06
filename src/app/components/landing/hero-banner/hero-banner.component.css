@@ -1,12 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 .carret:after{
     content:"_";
     margin-left: 0;
     margin-right: auto;
     animation: blink 1s infinite;
+}
+h1, div{
+    font-size : calc(1rem + 5vw);
+
 }
 
 @keyframes blink{
