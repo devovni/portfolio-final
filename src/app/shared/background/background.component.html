@@ -1,14 +1,15 @@
-<body>
-    <div class="stars-wrapper -z-20 dark:-z-10 opacity-0 dark:opacity-100 transition-opacity duration-[2000ms]" >
-        @for (field of starFields; track field) {
+    <div class="fixed stars-wrapper" >
+        @for (field of starFields; track $index) {
         <svg class="stars" width="100%" height="100%" preserveAspectRatio="none">
-            @for (stars of field; track stars) {
+            @for (stars of field; track $index) {
             <circle class="star" [attr.cx]="stars.x" [attr.cy]="stars.y" [attr.r]="stars.r"></circle>
             }
         </svg>
         }
     </div>
-    <div class=" bg-gradient-to-b from-sky-600 to-sky-400 fixed h-[100vh] w-[100vw] -z-10 dark:-z-20  opacity-100 dark:opacity-0 transition-opacity duration-[2000ms]">
-        <div class="cloud"></div>
+    <div class="fixed bg-gradient-to-b from-sky-600 to-sky-400 -z-10 dark:-z-20 opacity-100 dark:opacity-0 transition-opacity duration-[2000ms]"></div>
+    <div class="absolute overflow-hidden bg-transparent -z-10 dark:-z-20 opacity-100 dark:opacity-0 transition-opacity duration-[2000ms]">
+        <div class="cloud2 top-[20%]"></div>
+        
+
     </div>
-</body>
