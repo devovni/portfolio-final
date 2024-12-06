@@ -29,7 +29,6 @@ export class SwitchComponent implements AfterViewInit {
 
     document.documentElement.classList.toggle('dark', this.inputTag.nativeElement.checked)
     localStorage['darkMode'] = this.inputTag.nativeElement.checked
-    console.log(`local storage is ${localStorage['darkMode']}`)
-    console.log(`should be ${this.inputTag.nativeElement.checked}`)
+
   }
 }
